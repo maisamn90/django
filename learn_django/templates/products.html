@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{name}}</title>
+</head>
+<body>
+    <h1>Mais Ammaneh {{name}} </h1>
+    
+    <table border="1">
+        <tr>
+            <th width=100>Name</th>
+            <th width=100>Price</th>
+            <th width=200>Description</th>
+            <th>Edit</th>
+        </tr>
+        {% for item in data%}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.description}}</td>
+            <td><a href="edit/{{item.id}}"><button>edit</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="addproduct">Add New Product</a>
+</body>
+</html>

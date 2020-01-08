@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <h1>Mais Ammaneh </h1>
+    
+    <table border="1">
+        <tr>
+            <th width=100>Name</th>
+            <th width=100>Age</th>
+            <th width=200>Email</th>
+        </tr>
+        {% for item in data%}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.email}}</td>
+        </tr>
+        
+        {% empty%}
+        <h1>No Data</h1>
+        {% endfor %}
+    </table>
+    
+    <a href="addvisitor">Add New Visitor</a>
+</body>
+</html>
